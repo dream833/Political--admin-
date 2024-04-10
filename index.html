@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
-    <link rel="stylesheet" href="Style.css" />
+    <link rel="stylesheet" href="style/Style.css">
+    <link href="loader.css" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -64,17 +65,17 @@
         var password = document.getElementById("password").value;
         var remember = document.getElementById("remember").checked;
         var errorMessage = document.querySelector(".error-message");
-        // Perform login logic here (e.g., sending a request to the server)
+       
         console.log(email);
         console.log(password);
         console.log(remember);
 
         if (email && password) {
-          // Define the API URL where you want to send the login request
+          //mera api
           var apiUrl =
             "https://api.bhattacharjeesolution.in/book/api/admin-login.php";
 
-          // Prepare the request data (you may need to adjust this based on your API)
+
           var requestData = {
             emailid: email,
             password: password,
@@ -98,8 +99,7 @@
                 // Handle successful login (e.g., redirect to dashboard)
                 window.location.href = "/dashboard.html";
               } else {
-                // Handle login failure (e.g., show an error message)
-                // alert("Login failed. Please check your credentials.");
+               
                 errorMessage.textContent =
                   "Login failed. Please check your credentials.";
               }
