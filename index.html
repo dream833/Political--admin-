@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="style/style.css" rel="stylesheet">
+     
+  </head>
+  <body>
+    
+  
+    <div class="container-fluid">
+      <div class="container">
+        <br>
+        <nav class="navbar navbar-dark bg-primary">
+          
+           <br> <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"   aria-label="offcanvasNavbarLabel">
+              <span class="navbar-toggler-icon"></span>
+              
+            </button>
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">HOME</h5><hr><hr><hr><hr><hr><hr><br>
+            
+             
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <img src="images/pleaselogin.jpeg" width="90%" height="100%">
+                <div class="bottom-left"> 
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color: white;">Please Login</h5>
+              </div>
+            
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-labelledby="offcanvasNavbarLabel"></button>
+                
+              </div>
+              <div  align="center">
+                <h3><a class="abc" href="#">Home</a></h3>
+                <h3><a class="abc" href="#">About Politician</a></h3>
+                <h3><a class="abc" href="#">News</a></h3>
+                <h3><a class="abc" href="#">Work Details</a></h3>
+                <h3><a class="abc" href="#">Events Details</a></h3>
+                <h3><a class="abc" href="#">Complain</a></h3>
+                <h3><a class="abc" href="#">Contact</a></h3>
+                <h3><a class="abc" href="#">Help</a></h3>
+                <h3><a class="abc" href="#">Setting</a></h3>
+                <h3><a class="abc" href="#">Login</a></h3>
+              </div>
+
+            
+            </div>
+            
+
+
+          
+        </nav>
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="images/imageslider.jpeg" style="width:100%">
+            <div class="text">Caption Text</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="images/imageslider1.jpeg" style="width:100%">
+            <div class="text">Caption Two</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="images/imageslider3.jpeg" style="width:100%">
+            <div class="text">Caption Three</div>
+          </div>
+          
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+          
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+          </div>
+
+          
+          
+      </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+      let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "active";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "active";  
+  dots[slideIndex-1].className += " active";
+}
+    </script>
+
+
+  </body>
+</html>
